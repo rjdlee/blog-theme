@@ -16,6 +16,55 @@
             </p>
         </div>
     </section>
+    <section class="brainstorms inner-wide">
+        <img class="snorlax" src="assets/images/snorlax.png" aria-hidden="true" alt="Snorlax"/>
+        <h1 class="heading-brainstorms">Brainstorms</h1>
+        <p>
+            The way I see it, as long as you have your eyes open, there's boundless opportunities to improve the world
+            and my own life. For years, I've been writing down observations I make about the world. This is a collection
+            of my primary areas of observation.
+        </p>
+        {{> "loop-tag" filter_tag='brainstorm'}}
+        <p class="read-more">
+            <a class="button light" href="/tag/brainstorm" title="See More Brainstorms">See More</a>
+        </p>
+    </section>
+    <section class="shower-thoughts inner-wide">
+        <img class="mankey" src="assets/images/mankey.png" aria-hidden="true" alt="Mankey"/>
+        <h1 class="heading-shower-thoughts">Shower Thoughts</h1>
+        <p>
+            Some of my observations are just... observations. They may be interesting, but may not have an immediate
+            practical use. By sharing these, I'm hoping to pique the interest of readers who can further develop the
+            observation. This website is an open forum.
+        </p>
+        {{> "loop-tag" filter_tag='shower-thought'}}
+        <p class="read-more">
+            <a class="button" href="/tag/shower-thought" title="See More Shower Thoughts">See More</a>
+        </p>
+    </section>
+    <section class="overflow inner-wide">
+        <img class="magikarp" src="assets/images/magikarp.png" aria-hidden="true" alt="Magikarp"/>
+        <h1 class="heading-overflow">Overflow</h1>
+        <p>
+            The best way to learn is through experiencing. The second best way is through storytelling. Overflow stories
+            are written to close gaps I see in readily available information. I try to understand and explain why things
+            are the way they are. Drawings are bonus payoffs for reading through my works.
+        </p>
+        {{> "loop-tag" filter_tag='overflow'}}
+        <p class="read-more">
+            <a class="button light" href="/tag/overflow" title="See More Overflow">See More</a>
+        </p>
+    </section>
+
+    {{!-- Email subscribe form --}}
+    {{#if @labs.subscribers}}
+        <section class="subscribe inner-wide">
+            <h2 class="subscribe-box-title">Subscribe To My Thoughts</h2>
+            <p>Get my latest posts delivered right to your inbox!</p>
+            {{subscribe_form form_class="gh-subscribe-form" placeholder="Your email address"}}
+        </section>
+    {{/if}}
+
     <section class="projects inner-wide">
         <img class="sandshrew" src="assets/images/sandshrew.png" aria-hidden="true" alt="Sandshrew"/>
         <h1 class="heading-projects">Projects</h1>
@@ -68,52 +117,4 @@
             }}
         </div>
     </section>
-    <section class="brainstorms inner-wide">
-        <img class="snorlax" src="assets/images/snorlax.png" aria-hidden="true" alt="Snorlax"/>
-        <h1 class="heading-brainstorms">Brainstorms</h1>
-        <p>
-            The way I see it, as long as you have your eyes open, there's boundless opportunities to improve the world
-            and my own life. For years, I've been writing down observations I make about the world. This is a collection
-            of my primary areas of observation.
-        </p>
-        {{> "loop-tag" filter_tag='brainstorm'}}
-        <p class="read-more">
-            <a class="button light" href="/tag/brainstorm" title="See More Brainstorms">See More</a>
-        </p>
-    </section>
-    <section class="shower-thoughts inner-wide">
-        <img class="mankey" src="assets/images/mankey.png" aria-hidden="true" alt="Mankey"/>
-        <h1 class="heading-shower-thoughts">Shower Thoughts</h1>
-        <p>
-            Some of my observations are just... observations. They may be interesting, but may not have an immediate
-            practical use. By sharing these, I'm hoping to pique the interest of readers who can further develop the
-            observation. This website is an open forum.
-        </p>
-        {{> "loop-tag" filter_tag='shower-thought'}}
-        <p class="read-more">
-            <a class="button" href="/tag/shower-thought" title="See More Shower Thoughts">See More</a>
-        </p>
-    </section>
-    <section class="overflow inner-wide">
-        <img class="magikarp" src="assets/images/magikarp.png" aria-hidden="true" alt="Magikarp"/>
-        <h1 class="heading-overflow">Overflow</h1>
-        <p>
-            The best way to learn is through experiencing. The second best way is through storytelling. Overflow stories
-            are written to close gaps I see in readily available information. I try to understand and explain why things
-            are the way they are. Drawings are bonus payoffs for reading through my works.
-        </p>
-        {{> "loop-tag" filter_tag='overflow'}}
-        <p class="read-more">
-            <a class="button light" href="/tag/overflow" title="See More Overflow">See More</a>
-        </p>
-    </section>
-
-    {{!-- Email subscribe form --}}
-    {{#if @labs.subscribers}}
-        <section class="subscribe inner-wide">
-            <h2 class="subscribe-box-title">Subscribe To My Thoughts</h2>
-            <p>Get my latest posts delivered right to your inbox!</p>
-            {{subscribe_form form_class="gh-subscribe-form" placeholder="Your email address"}}
-        </section>
-    {{/if}}
 </main><!-- .site-main -->

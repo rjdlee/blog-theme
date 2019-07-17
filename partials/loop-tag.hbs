@@ -1,6 +1,6 @@
 <div class="post-grid">
     <!-- Pass filter_tag into the context to filter by that tag -->
-    {{#get "posts" filter="tag:{{filter_tag}}" limit="3" include="authors,tags" as |tag_posts|}}
+    {{#get "posts" filter="tag:{{filter_tag}}" limit="2" include="authors,tags" as |tag_posts|}}
         {{#foreach tag_posts}}
             <article class="grid-item {{post_class}}">
                 <div class="post-inside">
