@@ -1,0 +1,22 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The main content area on the tag page --}}
+<main class="site-main">
+    <section class="brainstorms inner-wide">
+        <h1 class="heading-brainstorms">Brainstorms</h1>
+        <p>
+            The way I see it, as long as you have your eyes open, there's boundless opportunities to improve the world
+            and my own life. For years, I've been writing down observations I make about the world. This is a collection
+            of my primary areas of observation.
+        </p>
+    </section>
+    <br/>
+    <div class="site-content">
+        <div class="inner-wide">
+            {{!-- The tag below includes the post loop - partials/loop-archive.hbs --}}
+            {{> "loop-archive"}}
+        </div><!-- .inner-wide -->
+
+    </div><!-- .site-content -->
+</main><!-- .site-main -->

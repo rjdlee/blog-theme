@@ -1,0 +1,17 @@
+<section class="site-search" role="search">
+	<div class="search-scrollable">
+		<div class="search-box">
+			<div class="search-box-inside">
+				<h2 class="screen-reader-text">Search {{@site.title}}</h2>
+				<form class="search-form">
+					<label class="screen-reader-text">Search for:</label>
+					<input type="text" id="search-field" class="search-field" placeholder="Type your keywords&hellip;" />
+					<input type="submit" class="search-submit screen-reader-text" value="Search" />
+				</form>
+				<div class="results-info">Posts found: <span class="results-count">0</span></div>
+				<div id="search-results" class="search-results"></div>
+			</div><!-- .search-box-inside -->
+		</div><!-- .search-box -->
+		<a class="search-toggle" href="#"><span class="screen-reader-text">Close</span><span aria-hidden="true" class="icon-close-custom"></span></a>
+	</div><!-- .search-scrollable -->
+</section><!-- .site-search -->

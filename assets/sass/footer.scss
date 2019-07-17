@@ -1,0 +1,74 @@
+.site-footer {
+  background-color: $color-brainstorms-background;
+
+  & .footer-top {
+    border-bottom: 1px solid #252525;
+    padding-bottom: 60px;
+    padding-top: 80px;
+  }
+
+  & .inner-wide {
+    position: relative;
+  }
+
+  & .footer-links, & .footer-pokemon {
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -60px;
+  }
+
+  & .footer-pokemon {
+  }
+
+  & .footer-links {
+    // Web Pokemon Width * Original Pokemon Height * Original Pokemon Width
+    height: calc(300px * 440 / 1123);
+    display: block;
+  }
+
+  & .footer-links > a {
+    position: absolute;
+    display: block;
+    border: none;
+    background-size: 100% 100%;
+    opacity: 0;
+  }
+
+  & .footer-links > a:hover {
+    opacity: 1;
+  }
+
+  & .footer-linkedin {
+    background-image: url("../images/linkedin-highlight.png");
+    top: 10px;
+    left: 202px;
+    height: 39px;
+    width: 31px;
+  }
+
+  & .footer-github {
+    background-image: url("../images/github-highlight.png");
+    top: 46px;
+    left: 97px;
+    height: 37px;
+    width: 33px;
+  }
+
+  & .footer-medium {
+    background-image: url("../images/medium-highlight.png");
+    top: 49px;
+    left: -1px;
+    height: 30px;
+    width: 36px;
+  }
+
+  & .footer-instagram {
+    background-image: url("../images/instagram-highlight.png");
+    top: 1px;
+    left: 98px;
+    height: 38px;
+    width: 38px;
+  }
+}

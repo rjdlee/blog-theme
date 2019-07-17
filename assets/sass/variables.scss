@@ -1,0 +1,29 @@
+// Typography
+$base-font: 'Droid Serif', serif;
+$alt-font: 'Montserrat', sans-serif;
+$heading-font: $alt-font;
+
+// Colors
+$color-accent: #82C6E9;
+
+$dark-heading-text: #111;
+$light-heading-text: #fff;
+$light-body-text: #ccc;
+
+$color-header-background: #fff;
+$color-about-background: #fff;
+$color-brainstorms-background: #0d1f30;
+$color-projects-background: #F7EF38;
+$color-shower-thoughts-background: #fff;
+$color-overflow-background: #4974FF;
+
+@mixin heading-underline {
+  content: ' ';
+  position: absolute;
+  bottom: -10px;
+  width: 80px;
+  height: 10px;
+  display: block;
+  background-size: 100% 100%;
+  background-image: url("../images/underline.png");
+}

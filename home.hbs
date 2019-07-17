@@ -1,0 +1,119 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The main content area on the homepage --}}
+<main class="site-main">
+    <section class="about inner-wide">
+        <div>
+            <img class="about-header" src="assets/images/richard-lee.png"/>
+            <div class="post-meta">Software Engineer, Entrepreneur, Designer?</div>
+        </div>
+        <div class="about-description">
+            <p>
+                I am a frontend software engineer focused on rapidly delivering engaging user experiences without
+                sacrificing long term cadence. I recognize and solve process shortcomings, whether that means
+                re-implementing an entire test suite or building React component libraries. I'm also an 'artist'.
+            </p>
+        </div>
+    </section>
+    <section class="projects inner-wide">
+        <img class="sandshrew" src="assets/images/sandshrew.png" aria-hidden="true" alt="Sandshrew"/>
+        <h1 class="heading-projects">Projects</h1>
+        <p>
+            I started programming because I wanted to build a flash games website. Since then, I've built countless web
+            apps, games, and everything in between (like Minecraft plugins).
+        </p>
+        <div class="post-grid">
+            {{> "project-grid-item"
+                    post_title='Alia Creative'
+                    post_excerpt='Alia Creative and I worked together on a portfolio website that would showcase their videography work.'
+                    post_url='//aliacreative.ca'
+                    post_feature_image='assets/images/alia-background.jpg'
+                    post_tags='Website'
+            }}
+            {{> "project-grid-item"
+                    post_title='Tank Time'
+                    post_excerpt='Online Wii Tanks. Homegrown game engine: physics, rendering, networking, and interpolation.'
+                    post_url='//tank.rjdlee.com'
+                    post_feature_image='assets/images/tank-background.jpg'
+                    post_tags='Game'
+            }}
+            {{> "project-grid-item"
+                    post_title='Tron Remake'
+                    post_excerpt='This is a fun game if you have a few friends over. The goal is simple: don\'t crash.'
+                    post_url='//rjdlee.com/projects/tron'
+                    post_feature_image='assets/images/tron-background.jpg'
+                    post_tags='Game'
+            }}
+            {{> "project-grid-item"
+                    post_title='Agar.io Clone'
+                    post_excerpt='Not a complete game, but demonstrates the flexibility of the game engine used for developing Tank Time.'
+                    post_url='//agar.rjdlee.com/'
+                    post_feature_image='assets/images/agar-background.jpg'
+                    post_tags='Game'
+            }}
+            {{> "project-grid-item"
+                    post_title='Starshot Calculator'
+                    post_excerpt='Built for Breakthrough Starshot (million dollar research effort for interstellar travel).'
+                    post_url='//rjdlee.com/projects/calculator'
+                    post_feature_image='assets/images/calculator-background.jpg'
+                    post_tags='Web App'
+            }}
+            {{> "project-grid-item"
+                    post_title='Go Mocha'
+                    post_excerpt='The branding for Go Mocha was produced from many iterations to perfectly capture the Mocha concept.'
+                    post_url='//rjdlee.com/projects/mocha'
+                    post_feature_image='assets/images/go-mocha-background.gif'
+                    post_tags='Website'
+            }}
+        </div>
+    </section>
+    <section class="brainstorms inner-wide">
+        <img class="snorlax" src="assets/images/snorlax.png" aria-hidden="true" alt="Snorlax"/>
+        <h1 class="heading-brainstorms">Brainstorms</h1>
+        <p>
+            The way I see it, as long as you have your eyes open, there's boundless opportunities to improve the world
+            and my own life. For years, I've been writing down observations I make about the world. This is a collection
+            of my primary areas of observation.
+        </p>
+        {{> "loop-tag" filter_tag='brainstorm'}}
+        <p class="read-more">
+            <a class="button light" href="/tag/brainstorm" title="See More Brainstorms">See More</a>
+        </p>
+    </section>
+    <section class="shower-thoughts inner-wide">
+        <img class="mankey" src="assets/images/mankey.png" aria-hidden="true" alt="Mankey"/>
+        <h1 class="heading-shower-thoughts">Shower Thoughts</h1>
+        <p>
+            Some of my observations are just... observations. They may be interesting, but may not have an immediate
+            practical use. By sharing these, I'm hoping to pique the interest of readers who can further develop the
+            observation. This website is an open forum.
+        </p>
+        {{> "loop-tag" filter_tag='shower-thought'}}
+        <p class="read-more">
+            <a class="button" href="/tag/shower-thought" title="See More Shower Thoughts">See More</a>
+        </p>
+    </section>
+    <section class="overflow inner-wide">
+        <img class="magikarp" src="assets/images/magikarp.png" aria-hidden="true" alt="Magikarp"/>
+        <h1 class="heading-overflow">Overflow</h1>
+        <p>
+            The best way to learn is through experiencing. The second best way is through storytelling. Overflow stories
+            are written to close gaps I see in readily available information. I try to understand and explain why things
+            are the way they are. Drawings are bonus payoffs for reading through my works.
+        </p>
+        {{> "loop-tag" filter_tag='overflow'}}
+        <p class="read-more">
+            <a class="button light" href="/tag/overflow" title="See More Overflow">See More</a>
+        </p>
+    </section>
+
+    {{!-- Email subscribe form --}}
+    {{#if @labs.subscribers}}
+        <section class="subscribe inner-wide">
+            <h2 class="subscribe-box-title">Subscribe To My Thoughts</h2>
+            <p>Get my latest posts delivered right to your inbox!</p>
+            {{subscribe_form form_class="gh-subscribe-form" placeholder="Your email address"}}
+        </section>
+    {{/if}}
+</main><!-- .site-main -->

@@ -1,0 +1,22 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The main content area on the tag page --}}
+<main class="site-main">
+    <section class="shower-thoughts inner-wide">
+        <h1 class="heading-shower-thoughts">Shower Thoughts</h1>
+        <p>
+            Some of my observations are just... observations. They may be interesting, but may not have an immediate
+            practical use. By sharing these, I'm hoping to pique the interest of readers who can further develop the
+            observation. This website is an open forum.
+        </p>
+    </section>
+    <br/>
+    <div class="site-content">
+        <div class="inner-wide">
+            {{!-- The tag below includes the post loop - partials/loop-archive.hbs --}}
+            {{> "loop-archive"}}
+        </div><!-- .inner-wide -->
+
+    </div><!-- .site-content -->
+</main><!-- .site-main -->

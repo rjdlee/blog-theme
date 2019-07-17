@@ -1,0 +1,122 @@
+@import "variables";
+
+.about, .projects, .brainstorms, .shower-thoughts, .overflow {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.about {
+  background-color: $color-about-background;
+  color: $dark-heading-text;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-top: 35px;
+  padding-bottom: 60px;
+
+  .about-header {
+    max-width: 300px;
+    margin-bottom: 8px;
+  }
+
+  .about-description {
+    padding: 30px 10% 30px 15%;
+    background-image: url('../images/about-background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.projects {
+  position: relative;
+  background-color: $color-projects-background;
+
+  .sandshrew {
+    position: absolute;
+    top: -74px;
+    height: 100px;
+  }
+}
+
+.brainstorms {
+  background-color: $color-brainstorms-background;
+  position: relative;
+
+  & p {
+    color: $light-body-text;
+  }
+
+  & .snorlax {
+    position: absolute;
+    top: -117px;
+    height: 150px;
+    right: 0;
+  }
+}
+
+.shower-thoughts {
+  background-size: 960px 400px;
+  background-repeat: repeat;
+  background-image: url("../images/shower-thought-background.png");
+  position: relative;
+
+  & .mankey {
+    position: absolute;
+    top: 0;
+    height: 200px;
+    right: 5%;
+  }
+}
+
+.overflow {
+  color: $light-body-text;
+  background-color: $color-overflow-background;
+  background-size: 574px 170px;
+  background-repeat: repeat;
+  background-image: url("../images/overflow-background.png");
+  position: relative;
+
+  & .heading-overflow {
+    color: $light-heading-text;
+  }
+
+  & .magikarp {
+    position: absolute;
+    top: -95px;
+    height: 150px;
+    right: 10%;
+  }
+}
+
+.subscribe {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  & .gh-subscribe-form {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .brainstorms.inner-wide {
+    // Make space for Snorlax
+    padding-bottom: 60px;
+  }
+
+  .shower-thoughts.inner-wide {
+    // Make space for Magikarp
+    padding-bottom: 60px;
+  }
+}

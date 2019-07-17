@@ -1,0 +1,63 @@
+@import "variables";
+
+.heading-projects,
+.heading-brainstorms,
+.heading-shower-thoughts,
+.heading-overflow {
+  display: inline-block;
+  margin-top: 64px;
+  margin-bottom: 64px;
+    position: relative;
+
+  &:before {
+    @include heading-underline
+  }
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    margin-top: -42px;
+    height: 128px;
+    width: 128px;
+    background-size: cover;
+    right: -160px;
+  }
+}
+
+.heading-projects:after {
+  background-image: url("../images/projects.png");
+}
+
+.heading-brainstorms:after {
+  background-image: url("../images/brainstorms.png");
+}
+
+.heading-shower-thoughts:after {
+  background-image: url("../images/shower-thoughts.png");
+}
+
+.heading-brainstorms {
+  display: inline-block;
+  padding: 0.5rem 3rem 1rem 3rem;
+  background-size: 100% 100%;
+  background-image: url('../images/brainstorm-header-background.png');
+
+  &:before {
+    content: none;
+  }
+
+  &:after {
+    right: -120px;
+  }
+}
+
+.heading-overflow {
+  &:before {
+    background-image: url("../images/underline-white.png");
+  }
+
+  &:after {
+    background-image: url("../images/overflow.png");
+  }
+}

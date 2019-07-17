@@ -1,0 +1,17 @@
+.row {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.row:first-child {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.col-6 { width: 25%; }
+.col-12 { width: 50%; min-width: 300px; }
+.col-18 { width: 75%; }
+.col-24 { width: 100%; }

@@ -1,0 +1,26 @@
+<article class="grid-item {{post_class}}">
+    <div class="post-inside">
+        {{#if post_feature_image}}
+            <div class="post-bg" style="background-image: url({{post_feature_image}})"></div>
+        {{/if}}
+        <header class="post-header">
+            {{#if post_tags}}
+                <div class="post-tags">
+                    {{post_tags separator=""}}
+                </div>
+            {{/if}}
+            <h2 class="post-title"><a href="{{{post_url}}}" rel="bookmark">{{post_title}}</a></h2>
+            {{#if post_authors}}
+                <div class="post-meta">
+                    by <span class="post-author">{{post_authors}}</span> on
+                    <time class="published" datetime="{{post_date format='YYYY-MM-DD'}}">{{post_date
+                            format="MMMM DD, YYYY"}}</time>
+                </div><!-- .post-meta -->
+            {{/if}}
+        </header><!-- .post-header -->
+        <div class="post-content">
+            <p>{{post_excerpt}}&hellip;</p>
+            <p class="read-more"><a class="button" href="{{post_url}}" title="{{post_title}}">Read More</a></p>
+        </div><!-- .post-content -->
+    </div>
+</article><!-- .post -->

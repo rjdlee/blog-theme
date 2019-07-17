@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+	{{!-- Document Settings --}}
+	<meta charset="utf-8">
+
+	{{!-- Page Meta --}}
+	<title>{{meta_title}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	{{!-- Styles --}}
+	<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic%7CMontserrat:400,700" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+
+	{{!-- Theme settings --}}
+	<script type="text/javascript">
+		var disqus_shortname = 'ridley-1', // replace my_disqus_shortname with your shortname
+			instagram_user_id = '2372162651', // add your Instagram user ID
+			instagram_access_token = '2372162651.d4daff6.d6c91752b4914a8da6e01a85747ae89e', // add your Instagram access token
+			search_key = 'ea4264f16ec4f9557bb948b000', // add your Content API key
+			search_host = '{{@blog.url}}';
+	</script>
+
+	{{!-- Ghost outputs important style and meta data with this tag --}}
+	{{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	<div id="page" class="site">
+		{{!-- The tag below includes the theme header - partials/header.hbs --}}
+		{{> header}}
+		{{!-- Everything else gets inserted here --}}
+		{{{body}}}
+		{{!-- The tag below includes the theme header - partials/sidebar.hbs --}}
+		{{> sidebar}}
+		{{!-- The tag below includes the theme footer widget area - partials/footer-widgets.hbs --}}
+		{{!-- The tag below includes the theme footer - partials/footer.hbs --}}
+		{{> footer}}
+		{{!-- The tag below includes the search - partials/search.hbs --}}
+		{{> search}}
+		<div class="overlay"></div>
+	</div><!-- #page -->
+
+	{{!-- Scripts --}}
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>window.jQuery || document.write('<script src="{{asset "js/jquery-3.2.1.min.js"}}"><\/script>');</script>
+	<script type="text/javascript" src="{{asset "js/plugins.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/custom.js"}}"></script>
+
+	{{!-- Ghost outputs important scripts and data with this tag --}}
+	{{ghost_foot}}
+
+</body>
+</html>
