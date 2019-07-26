@@ -32,6 +32,7 @@
 
   & > h1 {
     line-height: 0.8;
+    margin-bottom: 12px;
   }
 }
 
@@ -52,6 +53,7 @@
   padding: 1rem 3rem 1.2rem 3rem;
   background-size: 100% 100%;
   background-image: url('../images/brainstorm-header-background.png');
+  margin-bottom: 28px;
 
   &:before {
     content: none;
@@ -59,6 +61,10 @@
 
   &:after {
     right: -120px;
+  }
+
+  & > h1 {
+    margin-bottom: 30px;
   }
 }
 

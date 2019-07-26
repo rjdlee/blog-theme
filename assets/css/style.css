@@ -88,7 +88,8 @@
   .heading-brainstorms > h1,
   .heading-shower-thoughts > h1,
   .heading-overflow > h1 {
-    line-height: 0.8; }
+    line-height: 0.8;
+    margin-bottom: 12px; }
 
 .heading-projects:after {
   background-image: url("../images/projects.png"); }
@@ -103,11 +104,14 @@
   display: inline-block;
   padding: 1rem 3rem 1.2rem 3rem;
   background-size: 100% 100%;
-  background-image: url("../images/brainstorm-header-background.png"); }
+  background-image: url("../images/brainstorm-header-background.png");
+  margin-bottom: 28px; }
   .heading-brainstorms:before {
     content: none; }
   .heading-brainstorms:after {
     right: -120px; }
+  .heading-brainstorms > h1 {
+    margin-bottom: 30px; }
 
 .heading-overflow:before {
   background-image: url("../images/underline-white.png"); }
