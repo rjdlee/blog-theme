@@ -78,6 +78,17 @@
     width: 128px;
     background-size: cover;
     right: -160px; }
+  .heading-projects > i,
+  .heading-brainstorms > i,
+  .heading-shower-thoughts > i,
+  .heading-overflow > i {
+    display: block;
+    color: #111; }
+  .heading-projects > h1,
+  .heading-brainstorms > h1,
+  .heading-shower-thoughts > h1,
+  .heading-overflow > h1 {
+    line-height: 0.8; }
 
 .heading-projects:after {
   background-image: url("../images/projects.png"); }
@@ -90,7 +101,7 @@
 
 .heading-brainstorms {
   display: inline-block;
-  padding: 0.5rem 3rem 1rem 3rem;
+  padding: 1rem 3rem 1.2rem 3rem;
   background-size: 100% 100%;
   background-image: url("../images/brainstorm-header-background.png"); }
   .heading-brainstorms:before {
@@ -102,6 +113,8 @@
   background-image: url("../images/underline-white.png"); }
 .heading-overflow:after {
   background-image: url("../images/overflow.png"); }
+.heading-overflow > h1, .heading-overflow > i {
+  color: #fff; }
 
 .site-header {
   display: flex;
@@ -247,7 +260,10 @@
     padding-bottom: 60px; }
 
   .shower-thoughts.inner-wide {
-    padding-bottom: 60px; } }
+    padding-bottom: 60px; }
+
+  .projects.inner-wide {
+    margin-top: 60px; } }
 .site-footer {
   background-color: #0d1f30; }
   .site-footer .footer-top {
