@@ -79,6 +79,7 @@
   background-repeat: repeat;
   background-image: url("../images/overflow-background.png");
   position: relative;
+  padding-bottom: 45px;
 
   & .heading-overflow {
     color: $light-heading-text;

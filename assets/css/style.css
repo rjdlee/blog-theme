@@ -237,7 +237,8 @@
   background-size: 574px 170px;
   background-repeat: repeat;
   background-image: url("../images/overflow-background.png");
-  position: relative; }
+  position: relative;
+  padding-bottom: 45px; }
   .overflow .heading-overflow {
     color: #fff; }
   .overflow .magikarp {
@@ -2607,7 +2608,6 @@ section.site-search .search-toggle {
     height: 500px; }
 
   .grid-item:nth-child(3n+1),
-  .home-template .grid-item:nth-child(3n+3),
   .cover.hero,
   .slider-loading,
   .featured-slider .slick-slide {
